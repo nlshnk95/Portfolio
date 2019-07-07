@@ -7,7 +7,11 @@
         </li>
       </ul>
     </div>
-    <div class="hamburger-menu" @click="slideInOut" :class="{ active: isVisible }">
+    <div
+      class="hamburger-menu"
+      @click="slideInOut"
+      :class="{ active: isVisible }"
+    >
       <span></span>
       <br />
       <span></span>
@@ -18,9 +22,6 @@
 <script>
 export default {
   name: "Sidebar",
-  props: {
-    msg: String
-  },
   data: function() {
     return {
       isVisible: false,
@@ -90,7 +91,7 @@ export default {
   }
   &.active {
     span {
-      background: linear-gradient(rgb(255, 255, 255),rgb(235, 235, 235));
+      background: linear-gradient(rgb(255, 255, 255), rgb(235, 235, 235));
       &:first-child {
         transform: rotate(45deg);
       }
